@@ -18,4 +18,12 @@ const questions = [
         name: "initials",
         validate: validateInitials
     },
-]
+];
+
+function init() {
+    inquirer.prompt(questions).then((answers) => {
+        console.log('User Answers', answers);
+    })
+};
+
+init();
