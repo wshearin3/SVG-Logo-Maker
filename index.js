@@ -34,7 +34,13 @@ const questions = [
     {
         type: "input",
         message: "Please type the color you would like your logo background to be (color keyword or hexadecimal code)",
-        name: "colorCode",
+        name: "backgroundColorCode",
+        validate: validateColor
+    },
+    {
+        type: "input",
+        message: "Please type the color you would like your logo text to be (color keyword or hexadecimal code)",
+        name: "textColorCode",
         validate: validateColor
     },
 ];
