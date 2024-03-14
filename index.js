@@ -12,9 +12,11 @@ const validateInitials = input => {
     }
 };
 
+
+
 const validateColor = input => {
     let hexRegex = "^#[A-Fa-f0-9]{6}$";
-    if (input.match(hexRegex) || input){
+    if (input.match(hexRegex) || colorNames.includes(input.toLowerCase())){
         return true;
     } else {
         return "Please enter a valid color keyword or hexadecimal code"
