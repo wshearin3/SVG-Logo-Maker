@@ -13,6 +13,12 @@ const validateInitials = input => {
 };
 
 const validateColor = input => {
+    let hexRegex = "^#[A-Fa-f0-9]{6}$";
+    if (input.match(hexRegex) || input){
+        return true;
+    } else {
+        return "Please enter a valid color keyword or hexadecimal code"
+    }
     
 };
 
@@ -25,8 +31,9 @@ const questions = [
     },
     {
         type: "input",
-        message: "Please type the color you would like your logo background to be (color keyword or hexidecimal code)",
-        name: "colorCode"
+        message: "Please type the color you would like your logo background to be (color keyword or hexadecimal code)",
+        name: "colorCode",
+        validate: validateColor
     },
 ];
 
