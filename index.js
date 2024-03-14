@@ -2,6 +2,7 @@
 
 const inquirer = require('inquirer');
 const fs = require('fs');
+const colorNames = require('./lib/colornames');
 
 const validateInitials = input => {
     if(input.length <= 3) {
