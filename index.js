@@ -43,6 +43,12 @@ const questions = [
         name: "textColorCode",
         validate: validateColor
     },
+    {
+        type: "list",
+        message: "Please select the shape of your logo.",
+        choices: ["Circle", "Square", "Triangle"],
+        name: "logoShape"
+    }
 ];
 
 function init() {
