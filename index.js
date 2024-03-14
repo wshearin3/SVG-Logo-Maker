@@ -11,12 +11,21 @@ const validateInitials = input => {
     }
 };
 
+const validateColor = input => {
+    
+};
+
 const questions = [
     {
         type: "input",
         message: "Please enter up to three characters to be included in your logo.",
         name: "initials",
         validate: validateInitials
+    },
+    {
+        type: "input",
+        message: "Please type the color you would like your logo background to be (color keyword or hexidecimal code)",
+        name: "colorCode"
     },
 ];
 
