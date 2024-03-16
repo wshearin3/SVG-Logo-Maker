@@ -4,7 +4,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const colorNames = require('./lib/colornames');
 // const shapes = require('./lib/shapes');
-const Circle = require('./lib/shapes');
+const { Circle } = require('./lib/shapes');
 
 
 const validateInitials = input => {
