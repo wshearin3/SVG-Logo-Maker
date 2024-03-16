@@ -55,13 +55,7 @@ const questions = [
     }
 ];
 
-// function generateLogo(answers) {
-//     const circle = new Circle(answers);
-//     console.log(circle.backgroundColorCode.initials);
-//     const svgString = circle.render(answers);
-//     fs.writeFileSync('User Logo.svg', svgString, ()=> console.log("Generated logo.svg"));
-//     // console.log(svgString);
-// }
+
 
 function generateLogo(answers) {
     if (answers.logoShape == "Square") {
