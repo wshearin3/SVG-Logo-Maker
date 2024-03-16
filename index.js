@@ -71,8 +71,12 @@ function generateLogo(answers) {
     const svgString = circle.render(answers);
     fs.writeFileSync('User Logo.svg', svgString, ()=> console.log("Generated logo.svg"));
 
-    } else {
-
+    } else if (answers.logoShape == "Triangle") {
+        const triangle = new Triangle(answers);
+        console.log(triangle.backgroundColorCode.initials);
+        const svgString = triangle.render(answers);
+        fs.writeFileSync('User Logo.svg', svgString, ()=> console.log("Generated logo.svg"));
+    
     }
 };
 
