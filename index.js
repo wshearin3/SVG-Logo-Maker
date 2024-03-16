@@ -5,6 +5,7 @@ const fs = require('fs');
 const colorNames = require('./lib/colornames');
 // const shapes = require('./lib/shapes');
 const { Circle } = require('./lib/shapes');
+const { Square } = require('./lib/shapes');
 
 
 const validateInitials = input => {
@@ -54,13 +55,22 @@ const questions = [
     }
 ];
 
+// function generateLogo(answers) {
+//     const circle = new Circle(answers);
+//     console.log(circle.backgroundColorCode.initials);
+//     const svgString = circle.render(answers);
+//     fs.writeFileSync('User Logo.svg', svgString, ()=> console.log("Generated logo.svg"));
+//     // console.log(svgString);
+// }
+
 function generateLogo(answers) {
-    const circle = new Circle(answers);
-    console.log(circle.backgroundColorCode.initials);
-    const svgString = circle.render(answers);
+    const square = new Square(answers);
+    console.log(square.backgroundColorCode.initials);
+    const svgString = square.render(answers);
     fs.writeFileSync('User Logo.svg', svgString, ()=> console.log("Generated logo.svg"));
     // console.log(svgString);
 }
+
 
 function init() {
     inquirer.prompt(questions).then((answers) => {
