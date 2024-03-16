@@ -3,7 +3,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const colorNames = require('./lib/colornames');
-const circleShape = require('./lib/circle.js');
+
 
 const validateInitials = input => {
     if(input.length <= 3) {
@@ -52,15 +52,15 @@ const questions = [
     }
 ];
 
-// function generateLogo(answers) {
-//     const svg = circleShape;
-//     fs.writeFileSync('User Logo.svg', circleShape, ()=> console.log("Generated logo.svg"));
-// }
+function generateLogo(answers) {
+    const svg = circleShape;
+    fs.writeFileSync('User Logo.svg', circleShape, ()=> console.log("Generated logo.svg"));
+}
 
 function init() {
     inquirer.prompt(questions).then((answers) => {
         // generateLogo(answers);
-        console.log(Circle);
+        
         console.log('User Answers', answers);
     })
 };
