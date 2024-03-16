@@ -6,6 +6,7 @@ const colorNames = require('./lib/colornames');
 // const shapes = require('./lib/shapes');
 const { Circle } = require('./lib/shapes');
 const { Square } = require('./lib/shapes');
+const { Triangle } = require('./lib/shapes');
 
 
 const validateInitials = input => {
