@@ -64,18 +64,29 @@ const questions = [
 // }
 
 function generateLogo(answers) {
+    if (answers.logoShape == "Square") {
     const square = new Square(answers);
     console.log(square.backgroundColorCode.initials);
     const svgString = square.render(answers);
     fs.writeFileSync('User Logo.svg', svgString, ()=> console.log("Generated logo.svg"));
     // console.log(svgString);
-}
+    } else if (answers.logoShape == "Circle") {
+    const circle = new Circle(answers);
+    console.log(circle.backgroundColorCode.initials);
+    const svgString = circle.render(answers);
+    fs.writeFileSync('User Logo.svg', svgString, ()=> console.log("Generated logo.svg"));
+
+    } else {
+
+    }
+};
 
 
 function init() {
     inquirer.prompt(questions).then((answers) => {
+       
         generateLogo(answers);
-        
+        console.log(answers.logoShape);
         console.log('User Answers', answers);
         // console.log(svgString);
     })
